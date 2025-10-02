@@ -17,7 +17,20 @@ SECRET_KEY = 'django-insecure-!m$@xyh%0$&x_xtqg!2p^=ct==d5eek89--2_pd_-=(=d&!sp^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "backend-production-7915.up.railway.app",
+    "frontend-production-b36c.up.railway.app",   
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://backend-production-7915.up.railway.app",
+    "https://frontend-production-b36c.up.railway.app",
+]
+
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # CORS
 CORS_ALLOWED_ORIGINS = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "").split(",") if o.strip()]
