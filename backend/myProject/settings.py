@@ -18,14 +18,19 @@ SECRET_KEY = 'django-insecure-!m$@xyh%0$&x_xtqg!2p^=ct==d5eek89--2_pd_-=(=d&!sp^
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "backend-production-7915.up.railway.app",
-    "frontend-production-b36c.up.railway.app",   
+    "avataraichatbot-production.up.railway.app",        
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://backend-production-7915.up.railway.app",
-    "https://frontend-production-b36c.up.railway.app",
+    "https://avataraichatbot-production.up.railway.app",
+    "https://avataraichatbotfrontend-production.up.railway.app",
 ]
+
+
+CORS_ALLOWED_ORIGINS = [
+    "https://avataraichatbotfrontend-production.up.railway.app",
+]
+
 
 
 SESSION_COOKIE_SECURE = True
